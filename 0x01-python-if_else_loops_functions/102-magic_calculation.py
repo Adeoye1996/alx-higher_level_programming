@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def custom_calculation(x, y, z):
+def magic_calculation(x, y, z):
     if x < y:
         return z
     if z > y:
