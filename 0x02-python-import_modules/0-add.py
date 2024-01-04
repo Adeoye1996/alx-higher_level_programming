@@ -8,5 +8,5 @@ if __name__ == "__main__":
     # Import the add function from add_0.py
     from add_0 import add
 
-    # Use the print function with string format to display integers
-    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+    # Use print function with string format to display integers
+    print("{} + {} = {}".format(a, b, add(a, b)))
