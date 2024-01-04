@@ -1,28 +1,21 @@
 #!/usr/bin/python3
-import sys
-from calculator_1 import add, sub, mul, div
 
-if __name__ == "__main__":
-    # Check for correct number of arguments
-    if len(sys.argv) != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
+def my_addition(a, b):
+    """Perform addition of two integers."""
+    return a + b
 
-    a, op, b = map(int, sys.argv[1:4])
+def my_subtraction(a, b):
+    """Perform subtraction of two integers."""
+    return a - b
 
-    # Check for valid operator
-    if op not in ('+', '-', '*', '/'):
-        print("Unknown operator. Available operators: +, -, * and /")
-        sys.exit(1)
+def my_multiplication(a, b):
+    """Perform multiplication of two integers."""
+    return a * b
 
-    # Perform calculation based on operator
-    if op == '+':
-        result = add(a, b)
-    elif op == '-':
-        result = sub(a, b)
-    elif op == '*':
-        result = mul(a, b)
+def my_division(a, b):
+    """Perform division of two integers."""
+    if b != 0:
+        return int(a / b)
     else:
-        result = div(a, b)
-
-    print(f"{a} {op} {b} = {result}")
+        print("Error: Division by zero.")
+        return None
