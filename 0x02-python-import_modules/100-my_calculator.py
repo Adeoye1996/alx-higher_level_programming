@@ -1,21 +1,22 @@
 #!/usr/bin/python3
 
-def my_addition(a, b):
-    """Perform addition of two integers."""
-    return a + b
+from calculator_1 import add, sub, mul, div
+import sys
 
-def my_subtraction(a, b):
-    """Perform subtraction of two integers."""
-    return a - b
+if __name__ == "__main__":
+    """Handle basic arithmetic operations."""
+    if len(sys.argv) != 4:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        sys.exit(1)
 
-def my_multiplication(a, b):
-    """Perform multiplication of two integers."""
-    return a * b
+    operators = {"+": add, "-": sub, "*": mul, "/": div}
+    operator = sys.argv[2]
 
-def my_division(a, b):
-    """Perform division of two integers."""
-    if b != 0:
-        return int(a / b)
-    else:
-        print("Error: Division by zero.")
-        return None
+    if operator not in operators:
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
+
+    a, b = map(int, sys.argv[1:4])
+    result = operators[operator](a, b)
+
+    print(f"{a} {operator} {b} = {result}")
