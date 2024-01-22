@@ -1,23 +1,11 @@
 #!/usr/bin/python3
-safe_function = __import__('101-safe_function').safe_function
+import sys
 
 
-def my_div(a, b):
-    return a / b
-
-result = safe_function(my_div, 10, 2)
-print("Result of my_div: {}".format(result))
-
-result = safe_function(my_div, 10, 0)
-print("Result of my_div: {}".format(result))
-
-
-def print_list(my_list, length):
-    i = 0
-    while i < length:
-        print(my_list[i])
-        i += 1
-    return length
-
-result = safe_function(print_list, [1, 2, 3, 4], 10)
-print("Result of print_list: {}".format(result))
+def safe_function(fct, *args):
+    try:
+        num = fct(*args)
+        return num
+    except Exception as err:
+        print("Exception: {}".format(err), file=sys.stderr)
+        return None
