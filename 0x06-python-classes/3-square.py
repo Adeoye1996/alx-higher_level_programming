@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Square class defination."""
+"""Definition of a Square class."""
 
 
 class Square:
-    """Square class body."""
+    """Body of a Square class."""
 
     def __init__(self, size=0):
         """Square contructor.
