@@ -14,33 +14,42 @@ class Rectangle:
         self._height = 0
         self.set_width(width)
         self.set_height(height)
+
     @property
     def get_width(self):
         """Retrieve the width of the Rectangle."""
         return self._width
+    
     @property
     def get_height(self):
         """Retrieve the height of the Rectangle."""
         return self._height
     def set_width(self, value):
         """Set the width of the Rectangle."""
+        
         self._validate_dimension(value, "width")
         self._width = value
+    
     def set_height(self, value):
         """Set the height of the Rectangle."""
+        
         self._validate_dimension(value, "height")
         self._height = value
     def _validate_dimension(self, value, dimension):
+        
         """Validate the dimension value.
         """
         if not isinstance(value, int):
             raise TypeError(f"{dimension} must be an integer")
+        
         if value < 0:
             raise ValueError(f"{dimension} must be >= 0")
+    
     def area(self):
         """Return the area of the Rectangle.
         """
         return self._width * self._height
+    
     def perimeter(self):
         """Return the perimeter of the Rectangle.
         """
