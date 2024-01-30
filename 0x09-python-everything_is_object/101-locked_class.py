@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Defines a secured class."""
+"""Defines a locked class."""
 
-class RestrictedObject:
+class LockedClass:
     """
     Restricts the creation of new attributes in RestrictedObject
     except for attributes named 'first_name'.
