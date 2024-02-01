@@ -1,15 +1,16 @@
-How to Utilize 2-matrix_divided.py
+
+==============================
+How to Use 2-matrix_divided.py
 ==============================
 
-This module introduces a matrix division function named ``matrix_divided(matrix, div)``.
+This module defines a matrix division function ``matrix_divided(matrix, div)``.
 
 Usage
 =====
 
-The function `
-`matrix_divided(...)`` is employed to generate a new matrix. It operates by creating a copy of the given parameter ``matrix``, with all its elements divided by ``div``.
-The function 
-``matrix_divided(...)`` yields a fresh matrix, a duplicate of the provided parameter ``matrix``, wherein every element is divided by ``div``.
+``matrix_divided(...)`` returns a new matrix that is a copy of the parameter
+``matrix`` with all elements divided by ``div``.
+
 ::
 
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
@@ -19,6 +20,7 @@ The function
     ... ]
     >>> print(matrix_divided(matrix, 3))
     [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
 Note that quotients are rounded to a maximum of two decimal places.
 
 ::
