@@ -1,7 +1,9 @@
-# 100-matrix_mul.txt
 
+============================
+How to Use 100-matrix_mul.py
+============================
 
-Module defines a matrix multiplication function ``matrix_mul(m_a, m_b)``.
+This module defines a matrix multiplication function ``matrix_mul(m_a, m_b)``.
 
 Usage
 =====
@@ -29,7 +31,7 @@ Usage
     >>> print(matrix_mul(m_a, m_b))
     [[13, 16]]
 
-function also works with floating-point numbers.
+The function also works with floating-point numbers.
 
 ::
 
@@ -45,7 +47,7 @@ function also works with floating-point numbers.
     >>> print(matrix_mul(m_a, m_b))
     [[34.69, 55.44000000000001], [-78.61, 29.018000000000008]]
 
-The Integers and floats can be combined.
+Integers and floats can be combined.
 
 ::
 
@@ -207,7 +209,7 @@ equivalent. Otherwise, a TypeError is raised.
     ... ]
     >>> print(matrix_mul(m_a, m_b))
     Traceback (most recent call last):
-    TypeError: each row of m_a must be of the same size
+    TypeError: each row of m_a must should be of the same size
 
 ::
 
@@ -221,7 +223,7 @@ equivalent. Otherwise, a TypeError is raised.
     ... ]
     >>> print(matrix_mul(m_a, m_b))
     Traceback (most recent call last):
-    TypeError: each row of m_b must be of the same size
+    TypeError: each row of m_b must should be of the same size
 
 ::
 
@@ -232,4 +234,4 @@ equivalent. Otherwise, a TypeError is raised.
     >>> m_b = m_a
     >>> print(matrix_mul(m_a, m_b))
     Traceback (most recent call last):
-    TypeError: each row of m_a must be of the same size
+    TypeError: each row of m_a must should be of the same size
