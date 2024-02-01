@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is a reame file for 0x07 python test driven development
+=======
+this is a file for test drive
+>>>>>>> 16ef7107f839f934cd843d2a351906b545b9759b
 Tasks
 0. Integers addition
 mandatory
@@ -21,6 +25,10 @@ div can’t be equal to 0, otherwise raise a ZeroDivisionError exception with th
 All elements of the matrix should be divided by div, rounded to 2 decimal places
 Returns a new matrix
 You are not allowed to import any module
+<<<<<<< HEAD
+=======
+guillaume@ubuntu:~/0x07$ cat 2-main.py
+>>>>>>> 16ef7107f839f934cd843d2a351906b545b9759b
 2. Say my name
 mandatory
 Write a function that prints My name is <first name> <last name>
@@ -28,6 +36,7 @@ Write a function that prints My name is <first name> <last name>
 Prototype: def say_my_name(first_name, last_name=""):
 first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
 You are not allowed to import any module
+<<<<<<< HEAD
 3. Print square
 mandatory
 Write a function that prints a square with the character #.
@@ -38,3 +47,5 @@ size must be an integer, otherwise raise a TypeError exception with the message 
 if size is less than 0, raise a ValueError exception with the message size must be >= 0
 if size is a float and is less than 0, raise a TypeError exception with the message size must be an integer
 You are not allowed to import any module
+=======
+>>>>>>> 16ef7107f839f934cd843d2a351906b545b9759b
