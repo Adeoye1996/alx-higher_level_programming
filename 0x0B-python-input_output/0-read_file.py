@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+"""Defines text file-reading module."""
+
+
+def read_file(filename=""):
+    """
+    read_file function
+    Print the contents of a UTF8 text file to stdout."""
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")
