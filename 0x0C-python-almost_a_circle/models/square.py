@@ -13,7 +13,7 @@ class Square(Rectangle):
             size (int): The size of the square.
             x (int): The x-coordinate of the square.
             y (int): The y-coordinate of the square.
-            identity (int): The identity of the square.
+            id (int): The id of the square.
         """
         super().__init__(size, size, x, y, identity)
 
@@ -72,7 +72,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Return the dictionary representation of the Square."""
         return {
-            "identity": self.identity,
+            "id": self.id,
             "size": self.width,
             "x": self.x,
             "y": self.y
