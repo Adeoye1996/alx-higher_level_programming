@@ -55,7 +55,8 @@ class Base:
         """Deserialize a JSON string.
 
         Args:
-            json_string (str): A JSON str representation of a list of dictionaries.
+            json_string (str): A JSON str representation,
+            of a list of dictionaries.
         Returns:
             If json_string is None or empty - an empty list.
             Otherwise - the Python list represented by json_string.
@@ -66,10 +67,12 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Return a class instantiated from a dictionary of attributes.
+        """Return a class instantiated from a,
+        dictionary of attributes.
 
         Args:
-            **dictionary (dict): Key/value pairs of attributes to initialize.
+            **dictionary (dict): Key/value pairs of,
+            attributes to initialize.
         """
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
@@ -81,7 +84,8 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Load a list of entities instantiated from a file of JSON strings.
+        """Load a list of entities instantiated from,
+        a file of JSON strings.
 
         Reads from `<cls.__name__>.json`.
 
