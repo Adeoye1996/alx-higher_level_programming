@@ -13,7 +13,10 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Create MySQL connection string
-    mysql_conn = f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost:3306/{sys.argv[3]}"
+    mysql_conn = (
+            f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}"
+            f"@localhost:3306/{sys.argv[3]}"
+            )
 
     # Create SQLAlchemy engine
     engine = create_engine(mysql_conn, pool_pre_ping=True)
