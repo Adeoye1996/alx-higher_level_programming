@@ -16,24 +16,25 @@ if __name__ == "__main__":
     username, password, database = sys.argv[1:]
 
     # Create MySQL connection string
-    mysql = f"mysql+mysqldb://{username}:{password}@localhost:3306/{database}"
+mysql = f"mysql+mysqldb://{username}:{password}@localhost:3306/{database}"
 
-    # Create SQLAlchemy engine
-    engine = create_engine(mysql)
+# Create SQLAlchemy engine
+engine = create_engine(mysql)
 
-    # Create all tables in the database
-    Base.metadata.create_all(engine)
+# Create all tables in the database
+Base.metadata.create_all(engine)
 
-    # Create session
-    Session = sessionmaker(bind=engine)
-    session = Session()
+# Create session
+Session = sessionmaker(bind=engine)
+session = Session()
 
-    # Delete State objects with name containing 'a'
-    num_deleted = session.query(State).filter(State.name.contains('a')).delete(synchronize_session=False)
-    session.commit()
+# Delete State objects with name containing
+num_deleted = session.query(State)\
+                     .filter(State.name.contains('a'))\
+                     .delete(synchronize_session=False)
+session.commit()
 
-    print(f"{num_deleted} State(s) deleted.")
+print(f"{num_deleted} State(s) deleted.")
 
-    # Close session
-    session.close()
-
+# Close session
+session.close()
