@@ -5,6 +5,7 @@ Lists all states with a name starting with 'N' (uppercase N)
 import sys
 import MySQLdb
 
+
 def main():
     if len(sys.argv) != 4:
         print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
@@ -43,6 +44,7 @@ def main():
     finally:
         cursor.close()
         db.close()
+
 
 if __name__ == "__main__":
     main()
