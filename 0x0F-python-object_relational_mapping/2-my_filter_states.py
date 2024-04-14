@@ -1,30 +1,25 @@
 #!/usr/bin/python3
 """
-Displays all values in the states table of the specified database where
-name matches the provided state name
+Lists all states with a name starting with 'N' (uppercase N)
 """
 import sys
 import MySQLdb
 
 
 def main():
-    if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <database> <state_name>"
-              .format(sys.argv[0]))
+    if len(sys.argv) != 4:
+        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
         return
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-    state_name = sys.argv[4]
+    username, password, database = sys.argv[1:]
 
     try:
         db = MySQLdb.connect(
             host="localhost",
+            port=3306,
             user=username,
             passwd=password,
-            db=database,
-            port=3306
+            db=database
         )
     except MySQLdb.Error as e:
         print("Error connecting to the database:", e)
@@ -33,13 +28,12 @@ def main():
     cursor = db.cursor()
 
     try:
-        query = """
+        cursor.execute("""
             SELECT *
             FROM states
-            WHERE name LIKE BINARY '{}'
+            WHERE name LIKE BINARY 'N%'
             ORDER BY id ASC
-        """.format(state_name)
-        cursor.execute(query)
+        """)
         results = cursor.fetchall()
         for row in results:
             print(row)
