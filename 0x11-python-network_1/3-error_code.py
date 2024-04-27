@@ -6,7 +6,7 @@ if __name__ == "__main__":
     import urllib.error as error
     import urllib.request as request
     from sys import argv
-    
+
     url = argv[1]
     try:
         with request.urlopen(url) as response:
